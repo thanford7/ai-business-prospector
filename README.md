@@ -23,11 +23,11 @@ flowchart LR
   scheduler --> signalJob[Signal job]
   newsJob --> firecrawl[Firecrawl]
   newsJob --> decisions[Decisions API]
-  newsJob --> graph[LangGraph]
+  newsJob --> langgraph[LangGraph]
   signalJob --> xapi[X recent search]
   signalJob --> decisions
   signalJob --> db
-  graph --> db
+  langgraph --> db
   newsJob --> digest[Slack digest]
   signalJob --> digest
 ```
